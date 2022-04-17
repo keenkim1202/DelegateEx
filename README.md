@@ -28,7 +28,7 @@ Using 'class' keyword to define a class-constrained protocol is deprecated; use 
 -> class의 내부도 결국 AnyObject 이라 deprecate 된 것으로 알고 있음
 
 
-## 프로젝트 설명
+## 구현 방법
 - delegate가 준수해야할 `SomeDelegate` Protocol 정의
 - 커스텀뷰 클래스 안에 `var delegate: SomeDelegate?` 선언
   - 커스텀뷰는 `SomeView.xib`를 사용해 구성
