@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SomeView" customModule="DelegatePatternEx" customModuleProvider="target">
+            <connections>
+                <outlet property="someLabel" destination="gAw-ID-GNP" id="Ewo-FG-OW7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the button below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-ID-GNP">
+                    <rect key="frame" x="50" y="200" width="314" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemTealColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mmw-jN-Bei">
+                    <rect key="frame" x="50" y="270.5" width="314" height="31"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BES-1c-u3I">
+                            <rect key="frame" x="0.0" y="0.0" width="142" height="31"/>
+                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="start"/>
+                            <connections>
+                                <action selector="onStart:" destination="-1" eventType="touchUpInside" id="39T-wt-6JE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0P-I3-kY5">
+                            <rect key="frame" x="172" y="0.0" width="142" height="31"/>
+                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="finish"/>
+                            <connections>
+                                <action selector="onFinish:" destination="-1" eventType="touchUpInside" id="Sjv-y5-5Ic"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mmw-jN-Bei" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="B6d-MN-5aE"/>
+                <constraint firstAttribute="trailing" secondItem="gAw-ID-GNP" secondAttribute="trailing" constant="50" id="MVe-p1-oPe"/>
+                <constraint firstAttribute="trailing" secondItem="mmw-jN-Bei" secondAttribute="trailing" constant="50" id="ODg-Fl-rJX"/>
+                <constraint firstItem="gAw-ID-GNP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="200" id="cEP-js-MBz"/>
+                <constraint firstItem="gAw-ID-GNP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="rmr-em-PRx"/>
+                <constraint firstItem="mmw-jN-Bei" firstAttribute="top" secondItem="gAw-ID-GNP" secondAttribute="bottom" constant="50" id="yJw-8d-bKw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="144"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
